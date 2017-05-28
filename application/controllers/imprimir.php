@@ -30,6 +30,7 @@ class Imprimir extends CI_Controller {
 		//Periodos
 		$datos7['pruebac7']=$this-> imprimir_model-> FechaPe($Per['Per']);
 		foreach ($datos7['pruebac7']-> result() as $datos7['pruebac7']) { 
+			$PerFecha=$datos7['pruebac7']->Fecha=date("d-F-y",strtotime($datos7['pruebac7']->Fecha));
 			$Per1=$datos7['pruebac7']->Periodo1;
 			$Per2=$datos7['pruebac7']->Periodo2;
 			$Per3=$datos7['pruebac7']->Periodo3;
@@ -190,7 +191,7 @@ class Imprimir extends CI_Controller {
 			<th colspan=\"8\">Periodo Programado para 1er, 2do , 3er. y 4to Seguimiento </th>
 		</tr>
 		<tr>
-			<th colspan=\"2\">$fecha </th>
+			<th colspan=\"2\">$PerFecha </th>
 			<th colspan=\"2\">$Per1</th>
 			<th colspan=\"2\">$Per2</th>
 			<th colspan=\"2\">$Per3</th>

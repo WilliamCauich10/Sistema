@@ -10,13 +10,13 @@
 <body>
 <center>
 <legend class="text-center header"><?= $string ?></legend>
-<table class="responstable" style="width: 1300px;">
+<table class="responstable" style="width: 90%;">
 <tr>
-	<th style="width: 50px;">Id</th>
-	<th style="width: 80px;">Unidad</th>
-	<th style="width: 300px;">Tema</th>
-	<th>Subtema</th>
-	<th style="width: 150px;">Fecha Periodo</th>
+	<th style="width: 6%;">Id</th>
+	<th style="width: 3%;">Unidad</th>
+	<th style="width: 23%;">Tema</th>
+	<th style="width: 50%;">Subtema</th>
+	<th style="width: 20%;">Fecha Periodo</th>
 </tr>
 <?php 
 	$IdMateria = array('name'=>'txtIDM','id'=>'txtIDM','type'=>'text','class'=> 'texto','style'=>'visibility:hidden');
@@ -68,7 +68,7 @@
 						  // $queryID->IDA;  
 					 }
 
-							$query =$this-> db->where('IDA',$id);
+							$query =$this-> db->where('IDA',$queryID->IDA );
 							$query =$this-> db->where('Unidad',$prueba->Unidad);
 							$query =$this-> db->get('detalleavance');
 						if ($query -> num_rows()>0){?>

@@ -19,11 +19,24 @@ class Ingresarlogin_model extends CI_Controller {
 		if ($query -> num_rows()>0) return $query;
 		else return false; 	
 	}
+	function datosAlumnos($id){
+		$query = $this-> db->where('Num_Control',$id);
+		$query = $this-> db->get('alumnos');
+		if ($query -> num_rows()>0) return $query;
+		else return false; 	
+	}
 	function mostrarAvanceMa($id){
 		$query = $this-> db->where('Num_Tarjeta',$id);
 		$query = $this-> db->get('avanceprogramatico');
 		if ($query -> num_rows()>0) return $query;
 		else return false; 		
+	}
+	function ingresoAlumnos($id,$pw){
+		$query = $this-> db->where('Num_Control',$id);
+		$query = $this-> db->where('Contraseña',$pw);
+		$query = $this-> db->get('alumnos');
+		if ($query -> num_rows()>0) return $query;
+		else return false; 
 	}
 }
 ?>

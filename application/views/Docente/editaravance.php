@@ -10,13 +10,13 @@
 <body>
 <center>
 <legend class="text-center header">Editar tus Avances</legend>
-<table class="responstable" style="width: 1300px;">
+<table class="responstable" style="width: 87%;">
 <tr>
-	<th style="width: 200px;">Nombre</th>
-	<th style="width: 80px;">Grupo</th>
-	<th style="width: 100px;">Fecha</th>
-	<th style="width: 200px;">Carrera</th>
-	<th style="width: 60px;" >Accion</th>
+	<th style="width: 28.7%;">Nombre</th>
+	<th style="width: 14.2%;">Grupo</th>
+	<th style="width: 14.3%;">Fecha</th>
+	<th style="width: 28.7%;">Carrera</th>
+	<th style="width: 14.2%;" >Accion</th>
 </tr>
 <?php 
 	$ID=array('name'=>'txtIDA','id'=>'txtIDA','class'=>'texto','style'=>'visibility:hidden');

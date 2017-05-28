@@ -12,6 +12,7 @@
 	$PWA = array('name'=>'txtPWA','id'=>'txtPWA','class'=>'texto');
 	$NumTA = array('name'=>'txtNumTar','id'=>'txtNumTar','class'=>'texto');
 	$PWD = array('name'=>'txtPWD','id'=>'txtPWD','class'=>'texto','type'=>'password');
+  // print "<script type=\"text/javascript\">alert('Error de Numero de Tarjeta o Contraseña');</script>";
  ?>
  	<body>
   <div class="form">
@@ -73,11 +74,11 @@
         </div>
         
       </div><!-- tab-content -->
-      
+   
 </div> <!-- /form -->
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script src="/Sistema/js/index.js"></script>
-
+<?= print "<script type=\"text/javascript\">alert('Error de Numero de Control / Numero de Tarjeta o Contraseña');</script>"; ?>
 </body>
 </html>

@@ -9,21 +9,41 @@ class Login extends CI_Controller {
 	}
 	function index(){
 		$this-> load-> view('login/login');
+
 	}
 	function ingresoDocente(){
 		$datos ['id']= $this-> input-> post('txtNumTar');
 		$datos ['pw']=$this -> input-> post('txtPWD');
 		$datos['prueba']=$this-> ingresarlogin_model-> ingresaMaestro($datos['id'],$datos['pw']);
-		// $data['prueba']= $this-> ingresarlogin_model-> ingresaMaestro();	
-		$datos['myClass'] = $this;
-		$this-> load-> view('Docente/comprobar',$datos);
+		// $datos['myClass'] = $this;
+		// $this-> load-> view('Docente/comprobar',$datos);
+		if ($datos['prueba']) {
+			return $this-> principalDocente($datos['id']);
+		}else{
+			$this-> load-> view('login/comprobar');		
+		}
 	}
+	function ingresoAlumno(){
+		$datos ['id']= $this-> input-> post('txtNumC');
+		$datos ['pw']=$this -> input-> post('txtPWA');
+		$datos['prueba']=$this-> ingresarlogin_model-> ingresoAlumnos($datos['id'],$datos['pw']);
+		if ($datos['prueba']) {
+			return $this->principalAlumno($datos['id']);
+		}else{
+			$this-> load-> view('login/comprobar');		
+		}
+	}
+	
 	function principalDocente($Numtar){
 		$datos ['tarjeta']=$Numtar;
-		// $datos['nombre']=$NombreDoc;
 		$datos['prueba']=$this-> ingresarlogin_model-> datosMaestros($datos['tarjeta']);
 		$datos['myClass'] = $this;
 		$this-> load-> view('Docente/principal',$datos);			
+	}
+	function principalAlumno($NumCont){
+		$datos ['control']=$NumCont;
+		$datos['prueba']=$this-> ingresarlogin_model-> datosAlumnos($datos['control']);
+		$this-> load-> view('alumno/principal',$datos);
 	}
 	function avances($Numtar){
 		$datos['tarjeta']=$Numtar;

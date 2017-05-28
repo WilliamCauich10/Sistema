@@ -11,7 +11,7 @@
 	}
 	}else{
 		$myClass->index();
-		print "<script type=\"text/javascript\">alert('Error de Numero de Tarjeta o Contraseña');</script>";
+		print "<script type=\"text/javascript\">alert('Error de Numero de Control / Numero de Tarjeta o Contraseña');</script>";
 		
 		}
 ?>

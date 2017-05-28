@@ -36,6 +36,7 @@ class Imprimir_model extends CI_Controller {
 		if ($query -> num_rows()>0) return $query;
 		else return false; 	
 	}
+	
 	function DetalleMateria($Id){
 		// $this->db->select('d.Unidad,d.NombreTema,d.Subtemas,m.Periodo,m.PeriodoFin,m.Evaluacion');
   //       $this->db->from('detallemateria d');
