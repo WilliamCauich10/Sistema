@@ -9,7 +9,7 @@
 <body>
 <?php 
 	$Num = array('name'=>'txtNumC','id'=>'txtNumC','class'=>'texto');
-	$PWA = array('name'=>'txtPWA','id'=>'txtPWA','class'=>'texto');
+	$PWA = array('name'=>'txtPWA','id'=>'txtPWA','class'=>'texto','type'=>'password');
 	$NumTA = array('name'=>'txtNumTar','id'=>'txtNumTar','class'=>'texto');
 	$PWD = array('name'=>'txtPWD','id'=>'txtPWD','class'=>'texto','type'=>'password');
  ?>

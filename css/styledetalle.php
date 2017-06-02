@@ -104,3 +104,43 @@ h1 {
 h1 span {
   color: #167F92;
 }
+.MenuPrincipal{
+   position: relative;
+   background-color: #f2f2f2;
+   width: 100%;
+   height: 60px;
+}
+.MenuPrincipal ul {
+   position: relative;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #F0F0F0;
+   width: 100%;
+}
+
+.MenuPrincipal li {
+   float: left;
+   width: 280px;
+}
+
+.MenuPrincipal li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 19px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.MenuPrincipal li a:hover {
+    background-color: #5A9BD5;
+    color: white;
+}
+.Perfil{
+  position: center;
+}
+.Perfil li{
+  font-size: 30px; 
+}

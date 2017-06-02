@@ -22,11 +22,12 @@
 	$HT = array('name'=>'txtHT','id'=>'txtHT','class'=>'texto');
 	$Tarjeta = array('name'=>'txtTarjeta','id'=>'txtTarjeta','class'=>'texto',' readonly'=>'readonly');
 	$Jefe = array('name'=>'txtJefe','id'=>'txtJefe','class'=>'texto');
-	$Fecha = array('name'=>'txtFecha','id'=>'txtFecha','type'=>'date','class'=>'texto');
+	$Fecha = array('name'=>'txtFecha','id'=>'txtFecha','class'=>'texto','readonly'=>'readonly');
 	$options2 = array(
         'Enero-Julio'         => 'Enero-Julio',
         'Agosto-Diciembre'           => 'Agosto-Diciembre',
 );
+	$fecha =date("d/m/Y"); 
 ?>
 				<label>Materia
 				<br>
@@ -46,7 +47,7 @@
 				</label>
 				<label>Fecha
 					<br>
-					<?= form_input($Fecha)?>
+					<?= form_input($Fecha,$fecha)?>
 				</label>
 				<br>
 				<label>Grupo
