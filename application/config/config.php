@@ -25,7 +25,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 // 192.168.1.68:8080
 // localhost:8080
-$config['base_url'] = 'http://localhost/Sistema';
+//http://itche.esy.es/Sistema/
+$config['base_url'] = 'http://localhost/Sistema/';
 
 /*
 |--------------------------------------------------------------------------

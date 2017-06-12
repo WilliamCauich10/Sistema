@@ -30,12 +30,31 @@
 	<?php
 		$ID=array('name'=>'txtIDA','id'=>'txtIDA','class'=>'texto','style'=>'visibility:hidden');
 		$Tar=array('name'=>'txtTar','id'=>'txtTar','class'=>'texto','style'=>'visibility:hidden');
+		
+
+		//Obtengo la id al que pertenece el alumno
 		$queryIDG = $this-> db->where('Num_Control',$control);
 		$queryIDG = $this-> db->get('detallegrupo');
 		foreach ($queryIDG-> result() as $queryIDG) {
-			$idg=$queryIDG->IDG ?>
-		<?php 
-		$queryAvance = $this-> db->where('IDG',$idg);
+			$idg=$queryIDG->IDG;
+			$idm=$queryIDG->IDM;
+			// funciona me da las id materias que tiene el alumno
+		//
+		$queryMateria = $this-> db->where('IDM',$idm);
+		$queryMateria = $this-> db->get('materias');
+		foreach ($queryMateria-> result() as $queryMateria) {
+			$M=$queryMateria->Materia;
+		}
+		//
+		$queryIDG1 = $this-> db->where('Num_Control',$control);
+		$queryIDG1 = $this-> db->where('IDM',$idm);
+		$queryIDG1 = $this-> db->get('detallegrupo');
+		foreach ($queryIDG1-> result() as $queryIDG1) {
+			$idg1=$queryIDG1->IDG;
+		}
+		//Obtengo la materia
+		$queryAvance = $this-> db->where('IDG',$idg1);
+		$queryAvance = $this-> db->where('Materia',$M);
 		$queryAvance = $this-> db->get('avanceprogramatico');
 		foreach ($queryAvance-> result() as $queryAvance) {
 			$idtarjeta=$queryAvance->Num_Tarjeta

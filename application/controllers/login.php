@@ -33,7 +33,22 @@ class Login extends CI_Controller {
 			$this-> load-> view('login/comprobar');		
 		}
 	}
-	
+	function ingresoJefe(){
+		$datos ['id']= $this-> input-> post('txtNumTarJ');
+		$datos ['pw']=$this -> input-> post('txtPWDJ');
+		$datos['prueba']=$this-> ingresarlogin_model-> ingresaJefe($datos['id'],$datos['pw']);
+		if ($datos['prueba']) {
+			return $this->principalJefe($datos['id']);
+		}else{
+			$this-> load-> view('login/comprobar');		
+		}
+	}
+	function principalJefe($Numtar){
+		$datos ['tarjeta']=$Numtar;
+		$datos['prueba']=$this-> ingresarlogin_model-> datosMaestros($datos['tarjeta']);
+		$datos['myClass'] = $this;
+		$this-> load-> view('Docente/principaljefe',$datos);			
+	}
 	function principalDocente($Numtar){
 		$datos ['tarjeta']=$Numtar;
 		$datos['prueba']=$this-> ingresarlogin_model-> datosMaestros($datos['tarjeta']);

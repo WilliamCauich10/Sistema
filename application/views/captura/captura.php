@@ -56,7 +56,13 @@
 				</label>
 				<label>Carrera
 					<br>
-				<?= form_input($Carrera) ?>
+					<select name="Carr" class="texto">
+					<?php
+						$queryCarr = $this-> db->get('carreras');		
+						foreach ($queryCarr-> result() as $queryCarr) { ?>
+						  <option value="<?= $prueba->Materia; ?>"><?= $queryCarr-> Nombre; ?></option>
+					<?php } ?>
+					</select>
 				</label>
 				<br>
 				<label>Numero de Tarjeta

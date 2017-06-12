@@ -46,7 +46,7 @@ class Avanceprog extends CI_Controller {
 		 // $datos ['id']=$this -> input-> post('id');
 		 $materia= $this-> input-> post('city');
 		 $grupo = $this -> input-> post('txtGrupo');
-		 $carrera = $this -> input-> post('txtCarrera');
+		 $carrera = $this -> input-> post('Carr');
 		 $profesor = $this -> input-> post('txtTarjeta');
 		 $jefe = $this -> input-> post('txtJefe');
 		 $fecha= $this -> input-> post('txtFecha');//Periodo
@@ -62,7 +62,7 @@ class Avanceprog extends CI_Controller {
 			'txtTarjeta' => $this -> input-> post('txtTarjeta'),
 			'txtJefe' => $this -> input-> post('txtJefe'),
 			'txtFecha' => $this -> input-> post('txtFecha'),
-			'txtCarrera' => $this -> input-> post('txtCarrera'),
+			'txtCarrera' => $this -> input-> post('Carr'),
 			'Periodo' => $this -> input-> post('Periodo'),
 			);
 		$this-> pruebacaptura_model-> crearAvance($data);//listo data

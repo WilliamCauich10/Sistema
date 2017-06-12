@@ -12,6 +12,8 @@
 	$PWA = array('name'=>'txtPWA','id'=>'txtPWA','class'=>'texto','type'=>'password');
 	$NumTA = array('name'=>'txtNumTar','id'=>'txtNumTar','class'=>'texto');
 	$PWD = array('name'=>'txtPWD','id'=>'txtPWD','class'=>'texto','type'=>'password');
+  $NumTAJ = array('name'=>'txtNumTarJ','id'=>'txtNumTarJ','class'=>'texto');
+  $PWDJ = array('name'=>'txtPWDJ','id'=>'txtPWDJ','class'=>'texto','type'=>'password');
  ?>
  	<body>
   <div class="form">
@@ -19,6 +21,7 @@
       <ul class="tab-group">
         <li class="tab active"><a href="#signup">Alumnos</a></li>
         <li class="tab"><a href="#login">Maestros</a></li>
+        <li class="tab"><a href="#loginJefe">Jefe Dto</a></li>
       </ul>
       
       <div class="tab-content">
@@ -46,7 +49,31 @@
           <?= form_close() ?>
 
         </div>
-        
+      <!-- Maestro -->
+        <div id="loginJefe" class="jefe">   
+          <h1>Jefe Departamento</h1>
+          <?= form_open("login/ingresoJefe") ?>
+          
+            <div class="field-wrap">
+            <label>
+              Nunero de Tarjeta<span class="req">*</span>
+            </label>
+            <?= form_input($NumTAJ) ?>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Contraseña<span class="req">*</span>
+            </label>
+            <?= form_input($PWDJ) ?>
+          </div>
+          
+          <!-- <p class="forgot"><a href="#">Forgot Password?</a></p> -->
+          <button class="button button-block"/>Log In</button>
+          
+          <?= form_close() ?>
+        </div>
+        <!--  -->
         <div id="login">   
           <h1>Maestros</h1>
           <?= form_open("login/ingresoDocente") ?>
@@ -69,9 +96,7 @@
           <button class="button button-block"/>Log In</button>
           
           <?= form_close() ?>
-
         </div>
-        
       </div><!-- tab-content -->
       
 </div> <!-- /form -->

@@ -52,7 +52,7 @@ a:hover {
   color: #a0b3b0;
   font-size: 20px;
   float: left;
-  width: 50%;
+  width: 33%;
   text-align: center;
   cursor: pointer;
   -webkit-transition: .5s ease;
@@ -70,7 +70,9 @@ a:hover {
 .tab-content > div:last-child {
   display: none;
 }
-
+.jefe{
+  display: none;
+}
 h1 {
   text-align: center;
   color: black;
